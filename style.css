@@ -5,6 +5,7 @@
     background:black;
     position: sticky;
     top: 0; }
+
 .element {
     width: 19.5%;
     line-height: 50px;
@@ -14,3 +15,116 @@
     margin: 0;
     font-family: Arial;
     text-decoration: none; }
+
+.element:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 0.6s;
+    cursor: pointer;
+}
+
+.components {
+    height: 100px;
+    margin: 0;
+    background: black;
+    position: sticky;
+    top: 50px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+    
+.button1 {
+background-color: white;
+color: black;
+border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+background-color: #4CAF50;
+color: white;
+}
+
+.button2 {
+background-color: white;
+color: black;
+border: 2px solid #008CBA;
+}
+
+.button2:hover {
+background-color: #008CBA;
+color: white;
+}
+
+#contact {
+    background: black;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+.pacman::before,
+.pacman::after {
+    content: " ";
+    background: yellow;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    margin-left: -200px;
+    margin-top: -50px;
+    border-radius: 50px 50px 0 0 ;
+    animation: up 0.4s infinite;
+}
+
+.pacman::after {
+    margin-top: -1px;
+    border-radius: 0 0 50px 50px;
+    animation: down 0.4s infinite;
+}
+
+.dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-top: -5px;
+    margin-left: 30px;
+    border-radius: 50%;
+    background: yellow;
+    box-shadow: 40px 0 0 yellow, 80px 0 0 yellow, 120px 0 0 yellow;
+    animation: right_to_left 0.4s infinite;
+}
+
+@keyframes up {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-40deg);
+    }
+}
+@keyframes down {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes right_to_left {
+  100% {
+      margin-left: -10px;
+
+  }  
+}
