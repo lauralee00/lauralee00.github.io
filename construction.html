@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hiiiiiiiii</title>                           <!-- Give Title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="cool-icon.png">                    <!-- Insert Icon -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="interactions.js"></script>    <!-- Insert JQuery Script -->
+</head>
+
+<style>
+
+#contact {
+    background: black;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pacman::before,
+.pacman::after {
+    content: " ";
+    background: yellow;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    margin-left: -200px;
+    margin-top: -50px;
+    border-radius: 50px 50px 0 0 ;
+    animation: up 0.4s infinite;
+}
+
+.pacman::after {
+    margin-top: -1px;
+    border-radius: 0 0 50px 50px;
+    animation: down 0.4s infinite;
+}
+
+.dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-top: -5px;
+    margin-left: 30px;
+    border-radius: 50%;
+    background: yellow;
+    box-shadow: 40px 0 0 yellow, 80px 0 0 yellow, 120px 0 0 yellow;
+    animation: right_to_left 0.4s infinite;
+}
+
+@keyframes up {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-40deg);
+    }
+}
+@keyframes down {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes right_to_left {
+  100% {
+      margin-left: -10px;
+
+  }  
+}
+</style>
+<body id="contact">
+    <h1 style="color: yellow; margin-top: -100pt; display: inline-block; font-family: sans-serif;"> In Construction!</h1>
+    <div class="pacman"></div>
+    <div class="dot"></div>
+
+    <button onclick="window.location.href='index.html'" style="button1; margin-top: 200px; margin-left: -200px;">Return to Main Page </button>
+
+</body>
